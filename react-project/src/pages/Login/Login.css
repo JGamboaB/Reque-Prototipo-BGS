@@ -1,0 +1,32 @@
+.upperline{
+    width: 200%;
+    height: 120px;
+    background: #3a0ca3;
+}
+
+.container-md img{
+    width: auto;
+    height: 100px;
+    margin-top: -160px;
+    margin-left: auto;
+}
+
+.form {
+    margin-top: -70px;
+    margin-right: 70px;
+    border: 10px solid #2b2b2b;
+    background: #2b2b2b;
+    width: 30%;
+    height: auto;
+    float: right;
+}
+
+.form label {
+    color: rgb(255, 255, 255);
+}
+
+.buttonLogIn{
+    width: 100%;
+    justify-content: 'center';
+    align-items: 'center';
+}
