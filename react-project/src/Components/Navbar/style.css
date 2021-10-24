@@ -17,6 +17,7 @@
     margin-right: auto; /* center */
 }
 
+
 /* Sidebar */
 
 .side1 {
@@ -24,14 +25,13 @@
     max-width: 205px;
     float: left;
     vertical-align: top;
+    
 }
 
 .NLactive {
     color: white !important;
 }
 
-.end {
-    width: 20%;
-    height: 10000px;
-    background: #00000000;
+.container-fluid {
+    min-height:100vh; /* of screen */
 }

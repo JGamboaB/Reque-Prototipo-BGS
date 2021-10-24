@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from "react-bootstrap/Button";
 import './Login.css'
-import companyLogo from "../../images/invertedLogo.png"
+import stock_photo from "../../images/BGS_stock-photo.png"
 
 
 const Login = () => {
@@ -16,24 +16,11 @@ const Login = () => {
         console.log(user, password, remember);
     }
 
-    /*
-    <Form.Text id = "pwHelp" muted>
-        Your password must be 8-20 characters long, contain letters and numbers, and 
-        must not contain spaces or special characters.
-    </Form.Text>
-    */
 
     return (
         
         <div className="Main">
-            <div className="upperline"/>
-
-            <div className="container-md">
-                <img src={companyLogo} alt="BGS Logo"/>
-            </div>
-
             <div className="form">
-
                 <Form onSubmit={handleSubmit}>
                     <Form.Label className="labelA"> Online Banking </Form.Label> 
 
@@ -68,6 +55,9 @@ const Login = () => {
                         <a class="nav-link active" href="/register">Register</a>
                     </nav>
                 </Form>
+            </div>
+            <div className="picture">
+                <img src={stock_photo} alt="" /> 
             </div>
         </div>
     );

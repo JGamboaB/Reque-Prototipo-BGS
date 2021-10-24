@@ -9,7 +9,7 @@ const UNavbar = () => {
                 <a class="navbar-brand" href="/home">
                     <img src={logo} alt="" height="40"/> 
                 </a>
-                <a class="nav-link active" href="/">Exit</a>
+                <a class="nav-link active" href="/" id="joebiden">Exit</a>
             </nav>
         </div>
     );

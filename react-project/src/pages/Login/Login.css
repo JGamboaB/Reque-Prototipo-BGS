@@ -12,12 +12,13 @@
 }
 
 .form {
-    margin-top: -70px;
-    margin-right: 70px;
+    margin-top: 5%;
+    margin-right: 13%;
     border: 10px solid #2b2b2b;
     background: #2b2b2b;
+    max-width: 300px;
     width: 30%;
-    height: auto;
+    min-height: 400px;
     float: right;
 }
 
@@ -29,4 +30,9 @@
     width: 100%;
     justify-content: 'center';
     align-items: 'center';
+}
+
+.picture {
+    margin-top: 5%;
+    float: right;
 }
