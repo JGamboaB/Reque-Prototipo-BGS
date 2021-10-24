@@ -22,8 +22,8 @@ const App = () => {
             <Login/>
           </Route>
           <Route path="/home" exact>
-            <Navbar/> 
             <Home/>
+            <Navbar/>
           </Route>
           <Route path="/register" exact>
             <Register/>

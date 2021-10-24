@@ -26,7 +26,7 @@ const Login = () => {
     return (
         
         <div className="Main">
-            <div className="upperline"></div>
+            <div className="upperline"/>
 
             <div className="container-md">
                 <img src={companyLogo} alt="BGS Logo"/>

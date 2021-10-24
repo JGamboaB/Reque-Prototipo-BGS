@@ -1,0 +1,15 @@
+.LRegister{
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 45%;
+    color: rgb(255, 255, 255);
+}
+
+.form2 {
+    margin-top: -70px;
+    margin-left: auto;  /* center */
+    margin-right: auto; /* center */
+    width: 70%;
+    height: auto;
+    float: none;
+}
