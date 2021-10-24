@@ -1,0 +1,37 @@
+/* Navbar */
+
+.nav1{
+    background: #3a0ca3;
+}
+
+.navbar-brand img{
+    margin-right: 100%;
+    float: right;
+}
+
+.nav1 a{
+    font-weight: bold;
+    color: white;
+    text-align: right;
+    margin-left: auto;  /* center */
+    margin-right: auto; /* center */
+}
+
+/* Sidebar */
+
+.side1 {
+    width: 20%;
+    max-width: 205px;
+    float: left;
+    vertical-align: top;
+}
+
+.NLactive {
+    color: white !important;
+}
+
+.end {
+    width: 20%;
+    height: 10000px;
+    background: #00000000;
+}

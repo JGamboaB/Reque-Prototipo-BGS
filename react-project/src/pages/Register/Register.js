@@ -4,6 +4,7 @@ import DatePicker from 'react-date-picker';
 import "./Register.css"
 import companyLogo from "../../images/invertedLogo.png"
 
+
 const Register = () => {
     //Variables needed
     const[email, setEmail] = useState("");

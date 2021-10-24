@@ -8,7 +8,8 @@ import {
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login.js';
 import Register from './pages/Register/Register';
-import Navbar from './Components/Navbar/Navbar';
+import Sidebar from './Components/Navbar/Sidebar';
+import UNavbar from './Components/Navbar/UNavbar';
 
 const App = () => {
 
@@ -22,8 +23,9 @@ const App = () => {
             <Login/>
           </Route>
           <Route path="/home" exact>
+            <UNavbar/>
+            <Sidebar/>
             <Home/>
-            <Navbar/>
           </Route>
           <Route path="/register" exact>
             <Register/>
