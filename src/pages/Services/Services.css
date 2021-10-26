@@ -1,0 +1,16 @@
+.searchbar {
+    max-width:15%;
+    margin-left: 2%;
+}
+
+.searchdiv {
+    padding-top: 2%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.red-text {
+    color: red;
+}
