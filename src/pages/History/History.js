@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, Table, Row, Col, Form, Button} from 'react-bootstrap'
+import {Card, Table, Row, Col, Form} from 'react-bootstrap'
 import "./History.css"
 
 const History = () => {

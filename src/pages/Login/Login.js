@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import Form from 'react-bootstrap/Form'
-import Button from "react-bootstrap/Button";
+import {Form, Button} from 'react-bootstrap/'
 import './Login.css'
 import stock_photo from "../../images/BGS_stock-photo.png"
 

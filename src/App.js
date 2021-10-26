@@ -18,44 +18,51 @@ const App = () => {
 
   return (
     <Router>
-    
-
       <main>
         <Switch>
+
           <Route path="/" exact>
             <UNavbar/>
             <Login/>
           </Route>
+
           <Route path="/home" exact>
             <UNavbar/>
             <Sidebar/>
             <Home/>
           </Route>
+
           <Route path="/register" exact>
             <Register/>
           </Route>
+
           <Route path="/history" exact>
             <UNavbar/>
             <Sidebar/>
             <History/>
           </Route>
+
           <Route path="/services" exact>
             <UNavbar/>
             <Sidebar/>
             <Services/>
           </Route>
+          
           <Route path="/transfer" exact>
             <UNavbar/>
             <Sidebar/>
             <Transfer/>
           </Route>
 
+          {/* default = "/" */}
           <Redirect to="/"/>
+
         </Switch>
-        
       </main>
     </Router>
   );
 }
 
 export default App;
+
+//npm start
