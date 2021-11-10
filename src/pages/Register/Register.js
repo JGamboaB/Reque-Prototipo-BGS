@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import {Form, Row, Col, Button} from 'react-bootstrap'
+import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 import DatePicker from 'react-date-picker';
 import "./Register.css"
 import companyLogo from "../../images/invertedLogo.png"
@@ -19,7 +21,7 @@ const Register = () => {
     const[type, setType] = useState("");
 
     function validateForm(){
-        return email.length > 0 && password.length > 0
+        return email.length > 0 && password.length > 0 
     }
 
     function handleSubmit(event){
@@ -45,6 +47,9 @@ const Register = () => {
                             <Form.Label>Card Number</Form.Label>
                             <Form.Control type="text" placeholder="XXXX XXXX XXXX XXXX"
                             value={card} onChange={(e) => setCard(e.target.value)}/>
+                            <Form.Text id = "cardText" muted>
+                                Must be a valid card from BGS Bank.
+                            </Form.Text>
                         </Col>
                         <Col>
                             <Form.Label>Identification</Form.Label>
@@ -78,9 +83,16 @@ const Register = () => {
                             value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </Col>
                         <Col>
+
                             <Form.Label>Phone</Form.Label>
-                            <Form.Control type="text"
-                            value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                            {/*}<Form.Control type="text"
+                            value={phone} onChange={(e) => setPhone(e.target.value)}/>{*/}
+                            <PhoneInput
+                                international
+                                defaultCountry="CR"
+                                value={phone}
+                                onChange={setPhone}
+                                error={phone ? (isValidPhoneNumber(phone) ? undefined : 'Invalid phone number') : 'Phone number required'}/>
                         </Col>
                     </Row>
                     <Row className="mb-3">
@@ -124,3 +136,4 @@ const Register = () => {
 export default Register
 
 //npm install react-date-picker
+//npm install react-phone-number-input --save
