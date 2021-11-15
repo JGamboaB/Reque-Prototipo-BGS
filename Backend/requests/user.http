@@ -1,10 +1,14 @@
-@api = http://localhost:4000/user
+@api = http://localhost:4000
 
-GET {{api}}
+// ============= USER =============
 
-###
+// get all users
 
-POST {{api}}
+GET {{api}}/user
+
+### create new user
+
+POST {{api}}/user
 Content-Type: application/json
 
 {
@@ -19,22 +23,21 @@ Content-Type: application/json
     "userTypeId": 1
 }
 
+### get user by id
 
-###
+GET {{api}}/user/3
 
-GET {{api}}/3
+### delete user by id
 
-###
+DELETE {{api}}/user/7
 
-DELETE {{api}}/6
+### get amount of users
 
-###
+GET {{api}}/user/count
 
-GET {{api}}/count
+### update values of user by id
 
-###
-
-PUT {{api}}/7
+PUT {{api}}/user/7
 Content-Type: application/json
 
 {
@@ -46,4 +49,143 @@ Content-Type: application/json
     "name": "deif",
     "surname": "fied",
     "userTypeId": 1
+}
+
+
+// ============= TRANSFERENCE =============
+
+### get transferences
+
+GET {{api}}/trans
+
+### create new transference
+
+POST {{api}}/trans
+Content-Type: application/json
+
+{
+    "receiverAccount": "A21",
+    "giverAccount": "A20",
+    "amount": 5,
+    "name": "fink",
+    "description": "MEPER donas?",
+    "date": "2021-11-14"
+}
+
+### get transference by id
+
+GET {{api}}/trans/3
+
+### delete transference by id
+
+DELETE {{api}}/trans/6
+
+### get amount of transferences
+
+GET {{api}}/trans/count
+
+### update values of transference by id
+
+PUT {{api}}/trans/7
+Content-Type: application/json
+
+{
+    "receiverAccount": "Joe",
+    "giverAccount": "Mathew",
+    "amount": 1000000,
+    "name": "fink + correccion",
+    "date": "2021-11-14"
+}
+
+
+// ============= ACCOUNT =============
+
+### get accounts
+
+GET {{api}}/acc
+
+### create new account
+
+POST {{api}}/acc
+Content-Type: application/json
+
+{
+    "ibanCode": "A22",
+    "balance": 300,
+    "creationDate": "2020-10-10",
+    "type": 0,
+    "moneyTypeId": 1,
+    "userId": 3
+}
+
+### get account by ibanCode
+
+GET {{api}}/acc/A22
+
+### delete account by ibanCode
+
+DELETE {{api}}/acc/A22
+
+### get amount of accounts
+
+GET {{api}}/acc/count
+
+### update values of account by ibanCode
+
+PUT {{api}}/acc/7
+Content-Type: application/json
+
+{
+    "receiverAccount": "Joe",
+    "giverAccount": "Mathew",
+    "amount": 1000000,
+    "name": "fink + correccion",
+    "date": "2021-11-14"
+}
+
+
+// ============= CARD =============
+
+### get cards
+
+GET {{api}}/card
+
+### create new card
+
+POST {{api}}/card
+Content-Type: application/json
+
+{
+    "number": "12124545",
+    "expDate": "2023-12-12",
+    "cvv": "123",
+    "issuingCompany": "ICE",
+    "userId": 3,
+    "accountId": "A21"
+}
+
+### get card by id
+
+GET {{api}}/card/1
+
+### delete card by id
+
+DELETE {{api}}/card/2
+
+### get amount of cards
+
+GET {{api}}/card/count
+
+### update values of card by id
+
+PUT {{api}}/card/1
+Content-Type: application/json
+
+{
+    "number": "12124545",
+    "expDate": "2023-12-12",
+    "cvv": "123",
+    "issuingCompany": "TELECABLE",
+    "userId": 3,
+    "accountId": "A21"
 }
