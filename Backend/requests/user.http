@@ -1,0 +1,49 @@
+@api = http://localhost:4000/user
+
+GET {{api}}
+
+###
+
+POST {{api}}
+Content-Type: application/json
+
+{
+    "identification": 111111111,
+    "status": 1,
+    "username": "prueba",
+    "password": "1234",
+    "creationDate": "2021-11-14",
+    "email": "deif@mail.com",
+    "name": "deif",
+    "surname": "fied",
+    "userTypeId": 1
+}
+
+
+###
+
+GET {{api}}/3
+
+###
+
+DELETE {{api}}/6
+
+###
+
+GET {{api}}/count
+
+###
+
+PUT {{api}}/7
+Content-Type: application/json
+
+{
+    "identification": 111111111,
+    "status": 1,
+    "username": "prueba",
+    "password": "1234",
+    "creationDate": "2021-11-14",
+    "name": "deif",
+    "surname": "fied",
+    "userTypeId": 1
+}
