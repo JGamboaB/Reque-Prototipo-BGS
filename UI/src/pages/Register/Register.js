@@ -3,9 +3,10 @@ import {Form, Row, Col, Button} from 'react-bootstrap'
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 import DatePicker from 'react-date-picker';
+import validator from 'validator';
 import "./Register.css"
 import companyLogo from "../../images/invertedLogo.png"
-
+import "../global"
 
 const Register = () => {
     //Variables needed
@@ -19,9 +20,21 @@ const Register = () => {
     const[name, setName] = useState("");
     const[surname, setSurname] = useState("");
     const[type, setType] = useState("");
+    const current = new Date();
+
+    const pattern = new RegExp(
+        "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&?]).+$"
+      );
 
     function validateForm(){
-        return email.length > 0 && password.length > 0 
+        var cardV = card.length === 16 && !isNaN(card);
+        var idV = identification.length >= 9 && !isNaN(identification);
+        var nameV = name.length > 0 && surname.length > 0;
+        var dateV = birthdate.getTime() <= current.getTime();
+        var pwV = password.length >= 8 && pattern.test(password);
+        return cardV && idV && nameV && dateV && isValidPhoneNumber(phone) && validator.isEmail(email) && pwV;
+
+        //Validate Username & Card with backend
     }
 
     function handleSubmit(event){
@@ -48,7 +61,7 @@ const Register = () => {
                             <Form.Control type="text" placeholder="XXXX XXXX XXXX XXXX"
                             value={card} onChange={(e) => setCard(e.target.value)}/>
                             <Form.Text id = "cardText" muted>
-                                Must be a valid card from BGS Bank.
+                                Must be a valid card from BGS Bank. 16 digits.
                             </Form.Text>
                         </Col>
                         <Col>
@@ -73,7 +86,8 @@ const Register = () => {
                             <br/>
                             <DatePicker
                             onChange={setBirth}
-                            value = {birthdate}/>
+                            value = {birthdate}
+                            />
                         </Col>
                     </Row>
                     <Row className="mb-3">
@@ -109,8 +123,7 @@ const Register = () => {
                             <Form.Control type="password"
                             value={password} onChange={(e) => setPassword(e.target.value)}/>
                             <Form.Text id = "pwHelp" muted>
-                                Your password must be 8-20 characters long, contain letters and numbers, and 
-                                must not contain spaces or special characters.
+                                Your password must be at least 8 characters long, must contain at least one uppercase and one lowercase letter, a number and one of these special characters: ! @ # $ % ^ & ? 
                             </Form.Text>
                         </Col>
                     </Row>

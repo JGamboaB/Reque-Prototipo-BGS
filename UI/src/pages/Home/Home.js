@@ -1,9 +1,13 @@
 import React from 'react'
 import {Card, Table, Row} from 'react-bootstrap'
 import "./Home.css"
+import "../global"
 
 const Home = () => {
-    const amount = "24.100 CRC"
+    const name = global.username
+    const balance = "24.100 CRC"
+    const accountid = global.accountid
+    const description = "CR - BANK ACCOUNT"
 
     return (
         <div className="main">
@@ -13,7 +17,7 @@ const Home = () => {
                     <Card>
                         <Card.Body>
                             <Card.Title> Bank Accounts </Card.Title>
-                            <Card.Text> David Suárez Acosta </Card.Text>
+                            <Card.Text> {name} </Card.Text>
                             <br/>
                             <Table responsive="sm">
                                 <thead>
@@ -27,9 +31,9 @@ const Home = () => {
                                 {/* If multiple accounts, must do a for */}
                                 <tbody> 
                                     <tr>
-                                        <td>CR - BANK ACCOUNT</td>
-                                        <td>CR24548589731906176662</td>
-                                        <td>{amount}</td>
+                                        <td>{description}</td>
+                                        <td>{accountid}</td>
+                                        <td>{balance}</td>
                                     </tr>
                                 </tbody>
                             </Table>
@@ -38,7 +42,7 @@ const Home = () => {
                     </Card>
                     <br/>
                     
-                    <Card body> Total balance: {amount}</Card>
+                    <Card body> Total balance: {balance}</Card>
                 </div>
                 
 

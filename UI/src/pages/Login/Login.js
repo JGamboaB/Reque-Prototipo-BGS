@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {Form, Button} from 'react-bootstrap/'
 import './Login.css'
 import stock_photo from "../../images/BGS_stock-photo.png"
+import "../global"
 
 
 const Login = () => {

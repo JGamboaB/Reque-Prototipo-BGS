@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card, Table, Row, Col, Form} from 'react-bootstrap'
 import "./History.css"
+import "../global"
 
 const History = () => {
     return (
@@ -13,7 +14,7 @@ const History = () => {
                                 <Col>
                                     <Form.Label>Bank account</Form.Label>
                                     <Form.Control as="select">
-                                        <option>CR24548589731906176662</option>
+                                        <option>{global.accountid}</option>
                                     </Form.Control>
                                 </Col>
                             </Row>
@@ -34,6 +35,11 @@ const History = () => {
                                         <th>Amount</th>
                                     </tr>
                                 </thead>
+
+                                {/**
+                                 * Get JSON of JSONs: {{State, Date, Reference, Giver, Receiver, Amount}, ..., ... }
+                                 */}
+
                                 <tbody> 
                                     <tr>
                                         <td>Sent</td>

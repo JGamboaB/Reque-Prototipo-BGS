@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card, Table, Row, Form, Col} from 'react-bootstrap'
 import "./Services.css"
+import "../global"
 
 // Icons
 import iconApartment from '../../images/iconApartment.jpg'
